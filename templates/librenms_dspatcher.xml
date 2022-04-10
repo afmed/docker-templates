@@ -14,6 +14,7 @@
   <TemplateURL>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/librenms_dispatcher.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/icons/librenms_dispatcher.png</Icon>
   <Description>LibreNMS Poller servie that runs as a Docker Sidecar service</Description>
+  <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/librenms/" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/librenms/</Config>
   <Config Name="DISPATCHER_NODE_ID" Target="DISPATCHER_NODE_ID" Default="dispatcher1" Mode="" Description="DISPATCHER_NODE_ID" Type="Variable" Display="always" Required="false" Mask="false">public</Config>
   <Config Name="REDIS_HOST" Target="REDIS_HOST" Default="redis" Mode="" Description="REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false">public</Config>
   <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="6379" Mode="" Description="REDIS_PORT" Type="Variable" Display="always" Required="false" Mask="false">public</Config>
