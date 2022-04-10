@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>librenms_dispatcher</Name>
+  <Repository>librenms/librenms:latest</Repository>
+  <Registry>https://hub.docker.com/r/librenms/librenms/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>localtesting</Support>
+  <Project>https://www.librenms.org/</Project>
+  <Overview>LibreNMS Poller servie that runs as a Docker Sidecar service</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/librenms_dispatcher.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/icons/librenms_dispatcher.png</Icon>
+  <Description>LibreNMS Poller servie that runs as a Docker Sidecar service</Description>
+  <Config Name="DISPATCHER_NODE_ID" Target="DISPATCHER_NODE_ID" Default="dispatcher1" Mode="" Description="DISPATCHER_NODE_ID" Type="Variable" Display="always" Required="false" Mask="false">public</Config>
+  <Config Name="REDIS_HOST" Target="REDIS_HOST" Default="redis" Mode="" Description="REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false">public</Config>
+  <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="6379" Mode="" Description="REDIS_PORT" Type="Variable" Display="always" Required="false" Mask="false">public</Config>
+  <Config Name="REDIS_DB" Target="REDIS_DB" Default="0" Mode="" Description="REDIS_DB" Type="Variable" Display="always" Required="false" Mask="false">public</Config>
+  <Config Name="SIDECAR_DISPATCHER" Target="SIDECAR_DISPATCHER" Default="1" Mode="" Description="SIDECAR_DISPATCHER" Type="Variable" Display="always" Required="false" Mask="false">public</Config>
+  <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="MySQL database hostname / IP address" Type="Variable" Display="always" Required="false" Mask="false">192.168.0.100</Config>
+  <Config Name="DB_PORT" Target="DB_PORT" Default="3306" Mode="" Description="MySQL database port " Type="Variable" Display="always" Required="false" Mask="false">3306</Config>
+  <Config Name="DB_NAME" Target="DB_NAME" Default="test" Mode="" Description="MySQL database name" Type="Variable" Display="always" Required="false" Mask="false">librenms</Config>
+  <Config Name="DB_USER" Target="DB_USER" Default="" Mode="" Description="MySQL user " Type="Variable" Display="always" Required="false" Mask="false">librenms</Config>
+  <Config Name="DB_PASSWORD" Target="DB_PASSWORD" Default="" Mode="" Description="MySQL password" Type="Variable" Display="always" Required="false" Mask="false">librenms</Config>
+  <Config Name="DB_TIMEOUT" Target="DB_TIMEOUT" Default="60" Mode="" Description="Time in seconds after which we stop trying to reach the MySQL server" Type="Variable" Display="always" Required="false" Mask="false">60</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>
