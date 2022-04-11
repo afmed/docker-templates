@@ -7,6 +7,7 @@
   <MyIP>10.0.0.71</MyIP>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-medusa/issues/new/choose</Support>
   <Project>https://pymedusa.com/</Project>
   <Overview>Medusa(https://pymedusa.com/) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.</Overview>
   <Category>Downloaders: MediaApp:Video</Category>

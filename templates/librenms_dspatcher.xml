@@ -16,10 +16,6 @@
   <Icon>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/icons/librenms_dispatcher.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1649716312</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
   <Description>LibreNMS Poller servie that runs as a Docker Sidecar service</Description>
   <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/librenms/" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/librenms/</Config>
   <Config Name="SIDECAR_DISPATCHER" Target="SIDECAR_DISPATCHER" Default="1" Mode="" Description="Set to 1 to enable sidecar dispatcher mode for this container" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
