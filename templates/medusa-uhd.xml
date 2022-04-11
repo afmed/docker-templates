@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>medusa-hd</Name>
+  <Repository>lscr.io/linuxserver/medusa</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/medusa</Registry>
+  <Network>br0</Network>
+  <MyIP>10.0.0.72</MyIP>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://pymedusa.com/</Project>
+  <Overview>Medusa(https://pymedusa.com/) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.</Overview>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <WebUI>http://[IP]:[PORT:8081]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/medusa-hd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/icons/medusa-hd.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Description>Medusa(https://pymedusa.com/) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.</Description>
+  <Labels/>
+  <Config Name="WebUI" Target="8081" Default="8081" Mode="tcp" Description="The port for the Medusa webui" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
+  <Config Name="Path: /storage/media-btn" Target="/storage/media-btn" Default="" Mode="rw" Description="Download location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/media-btn</Config>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Medusa config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/medusa-hd</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>

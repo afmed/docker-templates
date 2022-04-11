@@ -3,24 +3,36 @@
   <Name>librenms_dispatcher</Name>
   <Repository>librenms/librenms:latest</Repository>
   <Registry>https://hub.docker.com/r/librenms/librenms/</Registry>
-  <Network>bridge</Network>
+  <Network>br0</Network>
+  <MyIP>10.0.0.103</MyIP>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>localtesting</Support>
+  <Support>https://forums.unraid.net/topic/89502-support-a75g-repo/</Support>
   <Project>https://www.librenms.org/</Project>
-  <Overview>LibreNMS Poller servie that runs as a Docker Sidecar service</Overview>
+  <Overview>LibreNMS Sidecar Docker for running the LibreNMS dispatcher service. https://docs.librenms.org/Extensions/Dispatcher-Service/ </Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/librenms_dispatcher.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/librenms.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/icons/librenms_dispatcher.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1649716312</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
   <Description>LibreNMS Poller servie that runs as a Docker Sidecar service</Description>
   <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/librenms/" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/librenms/</Config>
-  <Config Name="DISPATCHER_NODE_ID" Target="DISPATCHER_NODE_ID" Default="dispatcher1" Mode="" Description="DISPATCHER_NODE_ID" Type="Variable" Display="always" Required="false" Mask="false">dispatcher1</Config>
-  <Config Name="REDIS_HOST" Target="REDIS_HOST" Default="redis" Mode="" Description="REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false">redis</Config>
-  <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="6379" Mode="" Description="REDIS_PORT" Type="Variable" Display="always" Required="false" Mask="false">6379</Config>
-  <Config Name="REDIS_DB" Target="REDIS_DB" Default="0" Mode="" Description="REDIS_DB" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-  <Config Name="SIDECAR_DISPATCHER" Target="SIDECAR_DISPATCHER" Default="1" Mode="" Description="SIDECAR_DISPATCHER" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
-  <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="MySQL database hostname / IP address" Type="Variable" Display="always" Required="false" Mask="false">192.168.0.100</Config>
+  <Config Name="SIDECAR_DISPATCHER" Target="SIDECAR_DISPATCHER" Default="1" Mode="" Description="Set to 1 to enable sidecar dispatcher mode for this container" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="DISPATCHER_NODE_ID" Target="DISPATCHER_NODE_ID" Default="dispatcher1" Mode="" Description="Unique node ID for your dispatcher service" Type="Variable" Display="always" Required="false" Mask="false">dispatcher1</Config>
+  <Config Name="DISPATCHER_ARGS" Target="DISPATCHER_ARGS" Default="" Mode="" Description="Additional args to pass to the dispatcher service (https://github.com/librenms/librenms/blob/master/librenms-service.py)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="REDIS_HOST" Target="REDIS_HOST" Default="redis" Mode="" Description="Redis host for poller synchronization" Type="Variable" Display="always" Required="false" Mask="false">redis</Config>
+  <Config Name="REDIS_SENTINEL" Target="REDIS_SENTINEL" Default="" Mode="" Description="Redis Sentinel host for high availability Redis cluster" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="REDIS_SENTINEL_SERVICE" Target="REDIS_SENTINEL_SERVICE" Default="librenms" Mode="" Description="Redis Sentinel service name (default librenms)" Type="Variable" Display="always" Required="false" Mask="false">librenms</Config>
+  <Config Name="REDIS_SCHEME" Target="REDIS_SCHEME" Default="tcp" Mode="" Description="Redis scheme (default tcp)" Type="Variable" Display="always" Required="false" Mask="false">tcp</Config>
+  <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="6379" Mode="" Description="Redis port (default 6379)" Type="Variable" Display="always" Required="false" Mask="false">6379</Config>
+  <Config Name="REDIS_PASSWORD" Target="REDIS_PASSWORD" Default="" Mode="" Description="Redis password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="REDIS_DB" Target="REDIS_DB" Default="0" Mode="" Description="Redis database (default 0)" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="MySQL database hostname / IP address" Type="Variable" Display="always" Required="false" Mask="false">10.0.0.99</Config>
   <Config Name="DB_PORT" Target="DB_PORT" Default="3306" Mode="" Description="MySQL database port " Type="Variable" Display="always" Required="false" Mask="false">3306</Config>
   <Config Name="DB_NAME" Target="DB_NAME" Default="test" Mode="" Description="MySQL database name" Type="Variable" Display="always" Required="false" Mask="false">librenms</Config>
   <Config Name="DB_USER" Target="DB_USER" Default="" Mode="" Description="MySQL user " Type="Variable" Display="always" Required="false" Mask="false">librenms</Config>
