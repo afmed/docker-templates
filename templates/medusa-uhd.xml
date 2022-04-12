@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>medusa-hd</Name>
+  <Name>medusa-uhd</Name>
   <Repository>lscr.io/linuxserver/medusa</Repository>
   <Registry>https://github.com/orgs/linuxserver/packages/container/package/medusa</Registry>
   <Network>br0</Network>
