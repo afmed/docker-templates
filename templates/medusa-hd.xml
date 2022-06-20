@@ -4,7 +4,6 @@
   <Repository>lscr.io/linuxserver/medusa</Repository>
   <Registry>https://github.com/orgs/linuxserver/packages/container/package/medusa</Registry>
   <Network>br0</Network>
-  <MyIP>10.0.0.71</MyIP>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/linuxserver/docker-medusa/issues/new/choose</Support>
@@ -13,7 +12,7 @@
   <Category>Downloaders: MediaApp:Video</Category>
   <WebUI>http://[IP]:[PORT:8081]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/medusa-hd.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/icons/medusa-hd.png</Icon>
+  <Icon>https://raw.githubusercontent.com/afmed/docker-templates/main/templates/icons/medusa-hd.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

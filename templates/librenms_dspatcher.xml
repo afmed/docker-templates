@@ -4,7 +4,6 @@
   <Repository>librenms/librenms:latest</Repository>
   <Registry>https://hub.docker.com/r/librenms/librenms/</Registry>
   <Network>br0</Network>
-  <MyIP>10.0.0.103</MyIP>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/89502-support-a75g-repo/</Support>
@@ -12,8 +11,8 @@
   <Overview>LibreNMS Sidecar Docker for running the LibreNMS dispatcher service. https://docs.librenms.org/Extensions/Dispatcher-Service/ </Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/librenms.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/icons/librenms_dispatcher.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/librenms_dspatcher.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/afmed/docker-templates/main/templates/icons/librenms_dispatcher.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <Description>LibreNMS Poller servie that runs as a Docker Sidecar service</Description>
