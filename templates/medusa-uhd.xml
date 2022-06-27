@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>medusa-uhd</Name>
+  <Name>medusa-74-uhd</Name>
   <Repository>lscr.io/linuxserver/medusa</Repository>
   <Registry>https://github.com/orgs/linuxserver/packages/container/package/medusa</Registry>
-  <Network>br0</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/linuxserver/docker-medusa/issues/new/choose</Support>
@@ -11,13 +10,12 @@
   <Overview>Medusa(https://pymedusa.com/) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.</Overview>
   <Category>Downloaders: MediaApp:Video</Category>
   <WebUI>http://[IP]:[PORT:8081]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/afmed/docker-templates/master/templates/medusa-hd.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/afmed/docker-templates/main/templates/icons/medusa-hd.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/medusa.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/medusa-logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
   <Description>Medusa(https://pymedusa.com/) is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.</Description>
-  <Labels/>
   <Config Name="WebUI" Target="8081" Default="8081" Mode="tcp" Description="The port for the Medusa webui" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
   <Config Name="Path: /storage/media-btn" Target="/storage/media-btn" Default="" Mode="rw" Description="Download location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/media-btn</Config>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Medusa config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/medusa-uhd</Config>
