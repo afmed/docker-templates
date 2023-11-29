@@ -23,7 +23,7 @@
   <Config Name="Path: /mnt/user/data/_tr/20x" Target="/data" Default="" Mode="rw" Description="Local path for downloads." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/data/_tr/2xx</Config>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Where transmission should store config files and logs." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tr-2xx</Config>
   <Config Name="Path: /webui" Target="/webui" Default="/mnt/user/appdata/transmission-ui3" Mode="rw" Description="Local path for alternative UI." Type="Path" Display="advanced" Required="true" Mask="false"></Config>
-  <Config Name="PUID"  Target="TRANSMISSION_WEB_HOME"  Default=""  Mode="{3}" Description="Container Variable: TRANSMISSION_WEB_HOME"  Type="Variable" Display="advanced" Required="true" Mask="false">/webui</Config>
+  <Config Name="TRANSMISSION_WEB_HOME"  Target="TRANSMISSION_WEB_HOME"  Default=""  Mode="{3}" Description="Container Variable: TRANSMISSION_WEB_HOME"  Type="Variable" Display="advanced" Required="true" Mask="false">/webui</Config>
   <Config Name="PUID"  Target="PUID"  Default="99"  Mode="{3}" Description="Container Variable: PUID"  Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="PGID"  Target="PGID"  Default="100" Mode="{3}" Description="Container Variable: PGID"  Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
